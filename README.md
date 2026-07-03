@@ -83,7 +83,7 @@ The tool that tests security must itself be secure. TrustGate applies the Day-4 
 
 ```bash
 # 1. Clone the project
-git clone https://github.com/YOUR_ACCOUNT/trustgate.git
+git clone https://github.com/Diffomanou/trustgate.git
 cd trustgate
 
 # 2. Create and activate virtual environment
