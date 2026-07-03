@@ -1,0 +1,22 @@
+# TrustGate —  Dependencies
+
+# MCP SDK officiel ( Day 2 of the course)
+mcp>=1.9.0
+
+# Web dashboard
+fastapi>=0.111.0
+uvicorn>=0.29.0
+httpx>=0.27.0
+
+# Gemini SDK officiel (google-genai, not google-generativeai)
+google-genai>=1.0.0
+
+# Chargement .env / .env loading
+python-dotenv>=1.0.0
+
+# Tests
+pytest>=8.0.0
+pytest-cov>=4.0.0
+
+# Qualité du code / Code quality (optional)
+ruff>=0.4.0
