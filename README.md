@@ -57,12 +57,11 @@ Each agent does exactly one thing. The pipeline is modular, testable, and extens
 |---------|----------|-------|
 | Multi-agent system (ADK) | 5-node graph orchestrator | `agents/orchestrator.py` |
 | MCP Server | FastMCP server, 3 callable tools | `mcp/server.py` |
-| Agent Skills | 7 SKILL.md files, one per STRIDE pillar | `skills/*/SKILL.md` |
+| Agent Skills | Dynamically loaded per STRIDE pillar via SkillLoader (progressive disclosure) | `agents/skill_loader.py` + `skills/*/SKILL.md` |
 | Security guardrails | PII masking, rate limiter, response validator | `security/guardrails.py` |
-| Antigravity | Agent scaffolding via natural-language prompts | Demo video |
 | Deployability | Cloud Run Dockerfile + FastAPI servers | `Dockerfile`, `api_server.py` |
 
-6 out of 6 concepts covered. At least 3 are required.
+5 out of 6 concepts demonstrated directly in code. At least 3 are required by the competition.
 
 ---
 
@@ -290,8 +289,8 @@ trustgate/
 │   │   ├── judge_agent.py            # Deterministic rules + Gemini fallback
 │   │   ├── reporter_agent.py         # Score computation + JSON report
 │   │   ├── llm_client.py             # LLM abstraction: Mock / Gemini
-│   │   └── base_agent.py             # Abstract base class for all agents
-│   │
+│   │   ├── base_agent.py             # Abstract base class for all agents
+│   │   └──skill_loader.py           # Progressive skill loading 
 │   ├── security/
 │   │   ├── guardrails.py             # PII masking, rate limiter, validator
 │   │   └── payloads.py               # 10 built-in STRIDE test cases
