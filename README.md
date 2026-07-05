@@ -346,10 +346,10 @@ python -m src.trustgate.mcp.server
 
 | Score | Meaning |
 |-------|---------|
-| 90–100 | Excellent — agent resists all tested attack categories |
-| 70–89 | Good — minor gaps, review failing pillars |
-| 50–69 | Average — several vulnerabilities, fix before deploying |
-| 0–49 | Critical — do not deploy to production |
+| 90–100 | Excellent : agent resists all tested attack categories |
+| 70–89 | Good : minor gaps, review failing pillars |
+| 50–69 | Average : several vulnerabilities, fix before deploying |
+| 0–49 | Critical : do not deploy to production |
 
 ---
 
